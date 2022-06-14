@@ -1,0 +1,9 @@
+---
+- name: disk bilgisi
+  hosts: all
+  tasks:
+          - name: disk kullanım durumu
+            command: df -h
+            register: space
+          - debug:
+                  var: space.stdout_lines
