@@ -6,4 +6,3 @@
     ansible.builtin.user:
       name: ansible_test
       shell: /bin/bash
-      group: wheel
