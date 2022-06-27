@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: create user on remote host
+    ansible.builtin.user:
+      name: ansible_test2
+      password: ufHRwxpZVc3e
+      shell: /bin/bash
+      groups: "sudo"
