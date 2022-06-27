@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: create user on remote host
+    ansible.builtin.user:
+      name: ansible_test
+      shell: /bin/bash
+      group: wheel
