@@ -7,3 +7,4 @@
       name: ansible_test
       password: Password2
       shell: /bin/bash
+      groups: "sudo"
