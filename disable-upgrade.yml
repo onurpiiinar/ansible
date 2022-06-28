@@ -3,7 +3,7 @@
   tasks:
   - name: disable upgrade php7.4
     dpkg_selections:
-      name: mysql-server
+      name: php7.4
       selection: hold
 
   - name: Update and upgrade apt packages
