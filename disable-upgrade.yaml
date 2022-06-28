@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+
+  - name: disable upgrade php7.4 mysql-server
+    dpkg_selections:
+      name: php7.4
+      selection: hold
+    dpkg_selections:
+      name: mysql-server
+      selection: hold
+
+  - name: Upgrade all packages to the latest version except java & postgresql
+    apt:
+      name: "*"
+      force_apt_get: true
+      state: latest
