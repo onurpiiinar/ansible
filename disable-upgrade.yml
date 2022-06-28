@@ -1,9 +1,9 @@
 - hosts: all
   become: true
   tasks:
-  - name: disable upgrade mysql-server-8.0
+  - name: disable upgrade php7.4
     dpkg_selections:
-      name: mysql-server-8.0
+      name: php7.4
       selection: hold
 
   - name: Update and upgrade apt packages
