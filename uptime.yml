@@ -1,9 +1,9 @@
-- name: Find how long the hosts have been running.
-    hosts: all
-    tasks:
-      - name: Command to find the uptime using the Command Module
-        register: uptimeoutput
-        command: "uptime"
-
-      - debug:
-          var: uptimeoutput.stdout_lines
+---
+- name: Uptime
+  hosts: all
+  tasks:
+          - name: Uptime
+            command: uptime
+            register: uptimeoutput
+          - debug:
+                  var: uptimeoutput.stdout_lines
