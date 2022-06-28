@@ -12,7 +12,7 @@
       name: mysql-server
       selection: hold
 
-  - name: Upgrade all packages to the latest version except java & postgresql
+  - name: Upgrade all packages to the latest version except php7.4 mysql-server
     apt:
       name: "*"
       force_apt_get: true
